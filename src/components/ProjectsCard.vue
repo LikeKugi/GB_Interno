@@ -7,7 +7,7 @@ export default {
     title: String,
     text: String,
     img: String,
-    id: Number,
+    id: Number | String,
   },
   methods: {
     navigate() {

@@ -44,7 +44,7 @@ export default {
 
   &__container {
     @extend %container;
-    min-height: 100vh;
+    min-height: 75vh;
     padding: 50px;
     display: flex;
     justify-content: flex-start;
@@ -52,7 +52,7 @@ export default {
     background-image: url('@assets/img/hero/Image.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     border-radius: 50px;
   }
   &__intro {

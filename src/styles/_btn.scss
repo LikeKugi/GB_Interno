@@ -23,7 +23,17 @@
   border: none;
   outline: none;
 
-  svg {
+  svg path {
     transition: all 0.2s ease-in-out;
   }
+  &--large {
+    display: block;
+    padding: 26px 66px;
+    border-radius: 18px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  }
 }
+
