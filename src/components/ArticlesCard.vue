@@ -1,8 +1,10 @@
 <script>
 import {router} from "@routes/routes.js";
+import CardActions from "@components/CardActions.vue";
 
 export default {
   name: "ArticlesCard",
+  components: {CardActions},
   props: {
     img: String,
     tag: String,
@@ -27,23 +29,7 @@ export default {
     </div>
     <div class="card__description">
       <h3 class="card__title">{{ title }}</h3>
-      <div class="card__actions">
-        <p class="card__text">{{ date }} </p>
-        <button class="card__btn-nav"
-                @click="navigate">
-          <svg xmlns="http://www.w3.org/2000/svg"
-               width="52"
-               height="53"
-               viewBox="0 0 52 53"
-               fill="none">
-            <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813"
-                  stroke="#292F36"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"/>
-          </svg>
-        </button>
-      </div>
+      <CardActions :action="navigate" :date="date" />
     </div>
   </div>
 </template>
@@ -67,20 +53,7 @@ export default {
     @extend %paragraphXs;
     color: $secondary1;
   }
-  &__actions {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
   &__btn {
-    &-nav {
-      background-color: $primary3;
-      border-radius: 50%;
-      border: none;
-      outline: none;
-      cursor: pointer;
-      transition: all 0.3s ease-in-out;
-    }
     &-img {
       position: absolute;
       bottom: 20px;
@@ -100,6 +73,12 @@ export default {
   }
   &__image {
     position: relative;
+    img {
+      max-width: 340px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 45px 45px 0 0;
+    }
   }
   &:hover {
     background-color: $primary3;

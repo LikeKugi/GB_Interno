@@ -6,6 +6,14 @@ export default {
   components: {ArticlesCard},
   props: {
     articles: Array,
+    latest: Function,
+  },
+  methods: {
+    makeLatest(idx) {
+      if (this.latest) {
+        this.latest(idx);
+      }
+    }
   }
 };
 </script>
@@ -14,6 +22,7 @@ export default {
   <div class="cards">
 
     <ArticlesCard v-for="article in articles"
+                  @click="makeLatest(article.id)"
                   :id="article.id"
                   :title="article.title"
                   :img="article.img"
@@ -28,6 +37,8 @@ export default {
 <style scoped lang="scss">
 .cards {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  row-gap: 30px;
 }
 </style>
