@@ -9,9 +9,11 @@ import img7 from '@assets/img/articles/Image7.png';
 import ArticlesList from "@components/ArticlesList.vue";
 import PaginationButtons from "@components/PaginationButtons.vue";
 import ArticleLatest from "@components/ArticleLatest.vue";
+import PageHeader from "@components/PageHeader.vue";
+import headerImg from "@assets/img/HeaderBackgrounds/BlogPage.png"
 export default {
   name: "BlogPage",
-  components: {ArticleLatest, PaginationButtons, ArticlesList},
+  components: {PageHeader, ArticleLatest, PaginationButtons, ArticlesList},
   data() {
     return {
       articles: [
@@ -74,6 +76,7 @@ export default {
       ],
       currentPage: 1,
       latestIdx: 1,
+      headerImage: headerImg,
     }
   },
   methods: {
@@ -106,6 +109,7 @@ export default {
 
 <template>
   <div class="blog">
+    <PageHeader title="Articles & News" :image="headerImage" />
     <div class="blog__container">
       <h2 class="blog__title">Latest Post</h2>
       <div class="blog__inner">

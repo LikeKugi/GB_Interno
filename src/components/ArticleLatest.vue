@@ -17,7 +17,7 @@ export default {
   },
   methods: {
     navigate() {
-      router.push({path: `/blog/${this.id}`});
+      router.push({path: `/blog/${this.article.id}`});
     }
   }
 };
