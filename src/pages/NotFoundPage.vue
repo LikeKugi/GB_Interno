@@ -39,7 +39,6 @@ export default {
 
 <style scoped
        lang="scss">
-@import "@styles/_index.scss";
 
 .notFound {
   min-height: 80vh;

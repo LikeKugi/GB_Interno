@@ -49,7 +49,6 @@ export default {
 
 
 <style scoped lang="scss">
-@import "@styles/_index.scss";
 
 .articles {
   @extend %section;

@@ -45,7 +45,6 @@ export default {
 
 <style scoped
        lang="scss">
-@import "@styles/_index.scss";
 
 .slider {
   &__image {

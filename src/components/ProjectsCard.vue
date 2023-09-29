@@ -48,7 +48,7 @@ export default {
 </template>
 
 <style scoped lang="scss">
-@import "@styles/_index.scss";
+
 
 .card {
   max-width: 550px;

@@ -36,7 +36,6 @@ export default {
 
 
 <style scoped lang="scss">
-@import "@styles/_index.scss";
 
 .card {
   max-width: 382px;
@@ -82,9 +81,6 @@ export default {
   }
   &:hover {
     background-color: $primary3;
-    .card__btn-nav {
-      background-color: #fff;
-    }
   }
 }
 </style>

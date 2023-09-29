@@ -18,7 +18,6 @@ export default {
 </template>
 
 <style scoped lang="scss">
-@import "@styles/_index.scss";
 .nav {
   display: flex;
   align-items: center;

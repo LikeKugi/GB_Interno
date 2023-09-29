@@ -30,7 +30,7 @@ export default {
 </template>
 
 <style scoped lang="scss">
-@import "@styles/_index.scss";
+
 .pagination {
   display: flex;
   gap: 20px;

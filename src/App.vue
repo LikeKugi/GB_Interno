@@ -1,6 +1,10 @@
-<script setup>
+<script>
 import InternoHeader from "@/components/InternoHeader.vue";
 import InternoFooter from "@/components/InternoFooter.vue";
+export default {
+  name: 'App',
+  components: {InternoHeader, InternoFooter}
+}
 </script>
 
 <template>

@@ -30,7 +30,7 @@ export default {
 
 
 <style scoped lang="scss">
-@import "@styles/_index.scss";
+
 .header {
   position: sticky;
   top: 0;

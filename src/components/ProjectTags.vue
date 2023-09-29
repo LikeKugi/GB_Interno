@@ -21,7 +21,7 @@ export default {
 
 <style scoped
        lang="scss">
-@import "@styles/_index.scss";
+
 
 .tags {
   max-width: max-content;

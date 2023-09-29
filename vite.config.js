@@ -14,5 +14,12 @@ export default defineConfig({
       { find: '@routes', replacement: fileURLToPath(new URL('./src/routes', import.meta.url)) },
       { find: '@styles', replacement: fileURLToPath(new URL('./src/styles', import.meta.url)) },
     ],
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: "@import \"@styles/_index.scss\";",
+      }
+    }
   }
 })

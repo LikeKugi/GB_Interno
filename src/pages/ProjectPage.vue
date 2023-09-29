@@ -23,49 +23,57 @@ export default {
           img: img1,
           title: "Minimal Bedroom",
           text: "Decor / Artchitecture",
-          id: "1"
+          id: 1,
+          tags: ['Bed Room', 'Kitchan']
         },
         {
           img: img2,
           title: "Minimal Bedroom",
           text: "Decor / Artchitecture",
-          id: "2"
+          id: 2,
+          tags: ['Bed Room', 'Living Area']
         },
         {
           img: img3,
           title: "Classic Minimal Bedroom",
           text: "Decor / Artchitecture",
-          id: "3"
+          id: 3,
+          tags: ['Bed Room', 'Kitchan']
         },
         {
           img: img4,
           title: "Modern Bedroom",
           text: "Decor / Artchitecture",
-          id: "4"
+          id: 4,
+          tags: ['Bed Room', 'Living Area']
         },
         {
           img: img5,
           title: "Minimal Bedroom table",
           text: "Decor / Artchitecture",
-          id: "1"
+          id: 5,
+          tags: ['Bed Room', 'Bathroom']
         },
         {
           img: img6,
           title: "System Table",
           text: "Decor / Artchitecture",
-          id: "2"
+          id: 6,
+          tags: ['Bed Room', 'Bathroom']
         },
         {
           img: img7,
           title: "Modern Medroom",
           text: "Decor / Artchitecture",
-          id: "3"
+          id: 7,
+          tags: ['Bed Room', 'Kitchan']
         },
         {
           img: img8,
           title: "Modern Bedroom",
           text: "Decor / Artchitecture",
-          id: "4"
+          id: 8,
+          tags: ['Bed Room', 'Living Area']
         }
       ],
       tags: [
@@ -92,7 +100,29 @@ export default {
   },
   computed: {
     totalPages() {
-      return Math.ceil((this.projects.length * 3) / 8)
+      return Math.ceil((this.showedProjects.length) / 8)
+    },
+    mockProjects() {
+      const mock = [];
+      let j = 0;
+      for (let i = 0; i < 4; i ++) {
+        this.projects.forEach(project => {
+          mock.push({
+            ...project,
+            id: j++,
+          })
+        })
+      }
+      return mock;
+    },
+    showedProjects() {
+      if (!this.providedTag) {
+        return this.mockProjects;
+      }
+      return this.mockProjects.filter(project => project.tags.includes(this.providedTag));
+    },
+    renderedProjects() {
+      return this.showedProjects.slice((this.currentPage - 1) * 8, this.currentPage * 8);
     }
   },
   components: {PaginationButtons, ProjectsList, ProjectTags, PageHeader}
@@ -108,7 +138,7 @@ export default {
                    :action="setProvidedTag"
                    :provided-tag="providedTag"/>
       <div class="project__list">
-        <ProjectsList :projects="projects"/>
+        <ProjectsList :projects="renderedProjects"/>
       </div>
       <PaginationButtons :total="totalPages" :current="currentPage" :action="setCurrentPage" />
     </div>
@@ -116,7 +146,6 @@ export default {
 </template>
 
 <style scoped lang="scss">
-@import "@styles/_index.scss";
 .project {
   margin-bottom: 200px;
   &__container {
