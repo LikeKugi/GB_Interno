@@ -37,8 +37,8 @@ export default {
   justify-content: space-between;
 
   &__btn {
+    @include rounded(50%);
     background-color: $primary3;
-    border-radius: 50%;
     border: 1px solid #fff;
     outline: none;
     cursor: pointer;

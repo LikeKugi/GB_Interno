@@ -65,13 +65,13 @@ export default {
     color: $primary2;
   }
   &__btn {
+    @include rounded(50%);
     background-color: $primary3;
     display: block;
     padding: 26px 30px;
     border: none;
     outline: none;
     cursor: pointer;
-    border-radius: 50%;
     transition: background-color 0.2s ease-in-out;
     &:hover {
       background-color: $primary1;

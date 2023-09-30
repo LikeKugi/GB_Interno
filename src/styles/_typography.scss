@@ -19,7 +19,11 @@
 %grand {
   @include DMSans(250px);
 }
-
+%mark {
+  font-family: 'DM Sans';
+  font-size: 200px;
+  line-height: 85px;
+}
 %statsTitle {
   @include DMSans(85px);
 }

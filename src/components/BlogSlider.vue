@@ -63,6 +63,8 @@ export default {
   }
 
   &__zoom {
+    @include rounded(50%);
+    @include btnColors(#FFFFFF, $secondary2);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -70,8 +72,6 @@ export default {
     display: none;
     justify-content: center;
     align-items: center;
-    @include btnColors(#FFFFFF, $secondary2);
-    border-radius: 50%;
     cursor: pointer;
     border: none;
     outline: none;
@@ -85,10 +85,10 @@ export default {
   }
 
   &__btn {
+    @include rounded(50%);
     width: 20px;
     height: 20px;
     display: block;
-    border-radius: 50%;
     border: 2px solid black;
     background-color: #fff;
     cursor: pointer;

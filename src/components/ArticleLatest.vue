@@ -42,10 +42,10 @@ export default {
        lang="scss">
 
 .article {
+  @include rounded(62px);
   padding: 22px;
   display: flex;
   gap: 65px;
-  border-radius: 62px;
   border: 1px solid #E7E7E7;
   box-shadow: 0 10px 30px 0 rgba(255, 255, 255, 0.25);
   &__image {

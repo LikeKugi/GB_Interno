@@ -37,12 +37,12 @@ export default {
   justify-content: center;
   align-items: center;
   &__btn {
+    @include rounded(50%);
+    @include btnColors(#fff, $primary1);
     display: block;
     width: 52px;
     height: 52px;
-    @include btnColors(#fff, $primary1);
     border: 1px solid $primary1;
-    border-radius: 50%;
     cursor: pointer;
     &:disabled {
       @include btnColors($primary3, $primary3);

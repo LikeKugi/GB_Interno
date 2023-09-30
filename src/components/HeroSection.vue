@@ -42,6 +42,7 @@ export default {
   @extend %section;
 
   &__container {
+    @include rounded(50px);
     @extend %container;
     min-height: 75vh;
     padding: 50px;
@@ -52,7 +53,6 @@ export default {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    border-radius: 50px;
   }
   &__intro {
     max-width: 450px;

@@ -38,9 +38,9 @@ export default {
 <style scoped lang="scss">
 
 .card {
+  @include rounded(62px);
   max-width: 382px;
   padding: 21px;
-  border-radius: 62px;
   border: 1px solid #E7E7E7;
   box-shadow: 0 10px 30px 0 rgba(255, 255, 255, 0.25);
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
@@ -54,12 +54,12 @@ export default {
   }
   &__btn {
     &-img {
+      @include rounded(8px 8px 8px 0);
       position: absolute;
       bottom: 20px;
       left: 20px;
       display: block;
       padding: 4px 5px 8px 11px;
-      border-radius: 8px 8px 8px 0;
       border-color: transparent;
       outline: none;
       background: #FFF;
@@ -73,10 +73,10 @@ export default {
   &__image {
     position: relative;
     img {
+      @include rounded(45px 45px 0 0);
       max-width: 340px;
       width: 100%;
       object-fit: cover;
-      border-radius: 45px 45px 0 0;
     }
   }
   &:hover {

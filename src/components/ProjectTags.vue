@@ -22,8 +22,8 @@ export default {
 <style scoped
        lang="scss">
 
-
 .tags {
+  @include rounded(18px);
   max-width: max-content;
   display: flex;
   gap: 30px;
@@ -31,7 +31,6 @@ export default {
   justify-content: center;
   flex-wrap: wrap;
   margin: 0 auto;
-  border-radius: 18px;
   border: 1px solid #CDA274;
 
   &__btn {
