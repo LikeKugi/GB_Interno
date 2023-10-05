@@ -13,6 +13,7 @@ export default defineConfig({
       { find: '@pages', replacement: fileURLToPath(new URL('./src/pages', import.meta.url)) },
       { find: '@routes', replacement: fileURLToPath(new URL('./src/routes', import.meta.url)) },
       { find: '@styles', replacement: fileURLToPath(new URL('./src/styles', import.meta.url)) },
+      { find: '@storage', replacement: fileURLToPath(new URL('./src/storage', import.meta.url)) },
     ],
   },
   css: {

@@ -1,38 +1,13 @@
 <script>
 import ProjectsList from "@components/ProjectsList.vue";
+import {mapStores} from "pinia";
+import {useProjectStore} from "@storage/storage.js";
 
 export default {
   name: "FollowProjects",
   components: {ProjectsList},
-  data() {
-    return {
-      projects: [
-        {
-          img: 'src/assets/img/projects/Image1.png',
-          title: 'Modern Kitchan',
-          text: 'Decor / Artchitecture',
-          id: '1'
-        },
-        {
-          img: 'src/assets/img/projects/Image2.png',
-          title: 'Modern Kitchan',
-          text: 'Decor / Artchitecture',
-          id: '2'
-        },
-        {
-          img: 'src/assets/img/projects/Image3.png',
-          title: 'Modern Kitchan',
-          text: 'Decor / Artchitecture',
-          id: '3'
-        },
-        {
-          img: 'src/assets/img/projects/Image4.png',
-          title: 'Modern Kitchan',
-          text: 'Decor / Artchitecture',
-          id: '4'
-        }
-      ],
-    }
+  computed: {
+    ...mapStores(useProjectStore)
   }
 };
 </script>
@@ -44,7 +19,7 @@ export default {
       <p class="projects__text">It is a long established fact that a reader will be distracted by the of readable
         content of page lookings at its layouts points.</p>
 
-      <ProjectsList :projects="projects"/>
+      <ProjectsList :projects="projectStore.getRandomProjects(4)" target="home"/>
 
     </div>
   </section>

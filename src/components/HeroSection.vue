@@ -52,7 +52,7 @@ export default {
     background-image: url('@assets/img/hero/Image.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
   }
   &__intro {
     max-width: 450px;
