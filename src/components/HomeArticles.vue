@@ -1,6 +1,10 @@
 <script>
 import ArticlesList from "@components/ArticlesList.vue";
 
+import img1 from '@assets/img/articles/Image1.png';
+import img2 from '@assets/img/articles/Image2.png';
+import img3 from '@assets/img/articles/Image3.png';
+
 export default {
   name: "HomeArticles",
   components: {ArticlesList},
@@ -8,21 +12,21 @@ export default {
     return {
       articles: [
         {
-          img: 'src/assets/img/articles/Image1.png',
+          img: img1,
           tag: 'Kitchan Design',
           title: 'Let’s Get Solution For Building Construction Work',
           date: '26 December,2022',
           id: 1
         },
         {
-          img: 'src/assets/img/articles/Image2.png',
+          img: img2,
           tag: 'Living Design',
           title: 'Low Cost Latest Invented Interior Designing Ideas.',
           date: '22 December,2022',
           id: 2
         },
         {
-          img: 'src/assets/img/articles/Image3.png',
+          img: img3,
           tag: 'Interior Design',
           title: 'Best For Any Office & Business Interior Solution',
           date: '25 December,2022',
